@@ -64,7 +64,7 @@ public class LinearSearch {
   import java.util.Scanner;
 public class practice_array{
  public static void main(String [] args){
-  //get input in to arry
+  
   Scanner x=new Scanner(System.in);
   int input;
   int [][]array_2= {{1,2},{3,4}};
@@ -127,12 +127,6 @@ for(int j=0;j<c2;j++){
   sum=sum+arr1[i][k]*arr2[k][j];
  }
  arr3[i][j]=sum;
- 
- 
-
-
-
-
 }
 }
 for(int m=0;m<r1;m++){
@@ -148,6 +142,48 @@ else{
 }
 }
 
+}
+import java.util.*;
+
+class Sort2D {
+    public static void main(String args[]) {
+
+        int arr[][] = {
+            {5, 3, 8},
+            {1, 2, 7}
+        };
+
+        int rows = arr.length;
+        int cols = arr[0].length;
+
+        // Bubble sort for all elements
+        for(int i = 0; i < rows * cols - 1; i++) {
+
+            for(int j = 0; j < rows * cols - i - 1; j++) {
+
+                int row1 = j / cols;
+                int col1 = j % cols;
+
+                int row2 = (j + 1) / cols;
+                int col2 = (j + 1) % cols;
+
+                if(arr[row1][col1] > arr[row2][col2]) {
+
+                    int temp = arr[row1][col1];
+                    arr[row1][col1] = arr[row2][col2];
+                    arr[row2][col2] = temp;
+                }
+            }
+        }
+
+        // Print sorted matrix
+        for(int i = 0; i < rows; i++) {
+            for(int j = 0; j < cols; j++) {
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
 }
     }
 }
