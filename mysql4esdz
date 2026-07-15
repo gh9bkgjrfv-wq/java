@@ -40,3 +40,7 @@ SELECT COUNT(*) FROM table_name;
 
 
 SELECT column_name, COUNT(*) FROM table_name GROUP BY column_name;
+
+
+LOAD DATA LOCAL INFILE 'C:/data.txt' 
+INTO TABLE table_name;
